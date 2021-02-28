@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index</title>
+	<style type="text/css">
+		
+		#id1{
+			border:2px solid black;
+			width: 50%;
+			height: 400px;
+			margin: auto;
+			}
+		#id2{
+			display: flex;
+			margin: 10px;
+		}
+		#id2 h4 {
+			margin-right: 130px;
+		}
+		#id2 p {
+			margin-right: 130px;
+		}
+		#id2 input {
+			height: 30px;
+			width: 200px;
+			margin-top: 15px;
+		}
+		#Amount {
+			height: 30px;
+			width: 140px;
+			margin-top: 15px;
+			margin-right: 50px;
+			}
+		#inputr{
+			margin-left: 70%;
+			background-color: black;
+			color: white;
+			width: 100px;
+			padding: 6px;
+		}
+		#number{
+			border-radius: 10px;
+			}
+		#number1{
+			border-radius: 10px;
+			}
+	#mar{
+		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+	}
+	#flx{
+		display: flex;
+	}
+	table tr th{
+		border:2px solid black;
+	}
+	table tr td{
+		border:2px solid black;
+	}
+	</style>
+	<script type="text/javascript">
+
+		function salary(){
+	Amount	= document.getElementById('number').value;
+	Percentage = document.getElementById('number1').value;
+	bonusmult = Amount*Percentage;
+	FinalBonus = bonusmult/100;
+	document.getElementById('Bonus').innerHTML = FinalBonus;
+	//Mothsalary=Amount/12;
+	//document.getElementById('mothe').innerHTML = Mothsalary;
+	//document.getElementById('Bonus').innerHTML = FinalBonus;
+	texmulti =	Amount*12;
+	texyear = texmulti/100;
+	document.getElementById('tex1').innerHTML = texyear;
+	//texmulti1 =	Mothsalary*2;
+	//texmonth = texmulti1/100;
+	//document.getElementById('tex').innerHTML = texmonth;
+	PFAmount =	Amount*6;
+	PF= PFAmount/100;
+	document.getElementById('tex2').innerHTML = PF;
+	
+	InsurenceAmount= Amount*4;
+	Insurence=InsurenceAmount/100;
+	document.getElementById('tex3').innerHTML = Insurence;
+
+	subtotal=texyear+PF+Insurence;
+	document.getElementById('subtotal').innerHTML = subtotal;
+
+	total= Amount - subtotal;
+	document.getElementById('total').innerHTML = total;
+}
+		
+	</script>
+</head>
+<body>
+	<h3 style="text-align: center;">Salary Calculator</h3>
+	<div id="id1">
+		<div id="id2">
+			<h4>Cost to Comapny(CTC)</h4>
+			<p>Yearly</p>
+			<input type="number" name="num" id="number">
+		</div>
+		<div id="id2">
+			<h4>Bonus Incluede(CTC)</h4>
+	<select id="Amount">
+  <option value="percentage">Percentage</option>
+  <option value="Amount">Amount</option>
+  </select>
+			<input type="number" name="num" id="number1">
+		</div>
+		<input id="inputr" type="button" name="result" onclick="salary()" value="chech result">
+		<br>
+		<br>
+		<br>
+	
+<table id="mar"> 
+<tr>	<th>Tex:<div id="tex1">
+	</div></th>
+	<th>PF:<div id="tex2">
+	</div></th>
+	<th>Insurence: <div id="tex3">
+	</div></th>
+	<th>Sub-Total:<div id="subtotal">
+	</div></th>
+	<th>Total-Salary:<div id="total">
+	</div></th>
+	<th>Bonuse Amount:<div id="Bonus">
+	</div></th>
+	
+	</tr>
+	</table>
+	</div>
+
+		
+
+
+</body>
+</html>
